@@ -1,8 +1,18 @@
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
+
+import { ThemeProvider } from "@/components/theme-provider"
+import { MarketingPage } from "@/pages/marketing-page"
+
 export function App() {
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="font-medium">Hello World</div>
-    </div>
+    <ThemeProvider defaultTheme="dark" storageKey="mansastock-theme">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MarketingPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 
