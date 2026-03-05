@@ -1792,20 +1792,6 @@ export function MarketingPage() {
               />
             </form>
 
-            <div className="mt-6 flex flex-wrap justify-center gap-4">
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="h-12 border-border bg-muted/40 px-8 text-base font-semibold text-foreground hover:bg-muted/80 hover:border-white/20 transition-all"
-                >
-                  View on GitHub
-                </Button>
-              </motion.div>
-            </div>
           </motion.div>
         </section>
       </main>
