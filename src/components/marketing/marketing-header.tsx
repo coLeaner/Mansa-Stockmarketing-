@@ -53,7 +53,7 @@ export function MarketingHeader() {
           borderColor: scrolled
             ? "var(--header-border-scrolled)"
             : "var(--header-border)",
-          backdropBlur: scrolled ? "16px" : "12px",
+          backdropFilter: scrolled ? "blur(16px)" : "blur(12px)",
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
