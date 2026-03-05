@@ -27,13 +27,13 @@ import {
   productPreviewScreens,
   targetSegments,
 } from "@/components/marketing/data";
-import demoVideo from "@/assets/Demovideo/mansa-video.mp4";
 import { MarketingFooter } from "@/components/marketing/marketing-footer";
 import { MarketingHeader } from "@/components/marketing/marketing-header";
 import { ScreenshotFrame } from "@/components/marketing/screenshot-frame";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+const demoVideoUrl = "/demo/mansa-video.mp4";
 /* ─────────────────────────────────────────────
    Count-up hook
 ───────────────────────────────────────────── */
@@ -1152,7 +1152,7 @@ export function MarketingPage() {
                   <video
                     ref={workflowVideoRef}
                     className="block aspect-video w-full object-cover transition-transform duration-1000 group-hover:scale-[1.015]"
-                    src={demoVideo}
+                    src={demoVideoUrl}
                     poster={heroScreenshots.pos.src}
                     autoPlay
                     controls
@@ -1807,6 +1807,9 @@ export function MarketingPage() {
     </div>
   );
 }
+
+
+
 
 
 
