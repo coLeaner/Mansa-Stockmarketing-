@@ -7,13 +7,13 @@ import {
   Menu,
   Radio,
   ShieldCheck,
-  Sparkles,
   X,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/mansastock-logo.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -62,8 +62,12 @@ export function MarketingHeader() {
             {/* Logo */}
             <div className="flex items-center gap-8">
               <Link to="/" className="group flex items-center gap-2.5">
-                <div className="relative flex size-8 items-center justify-center rounded-lg border border-emerald-500/30 bg-white/5 text-emerald-400 transition-all duration-300 group-hover:border-emerald-500/50 group-hover:bg-white/10">
-                  <Sparkles className="size-4" />
+                <div className="relative flex size-8 items-center justify-center overflow-hidden rounded-lg border border-emerald-500/30 bg-white/5 transition-all duration-300 group-hover:border-emerald-500/50 group-hover:bg-white/10">
+                  <img
+                    src={logo}
+                    alt="MansaStock logo"
+                    className="size-full object-cover"
+                  />
                 </div>
                 <span className="text-sm font-bold tracking-tight text-foreground transition-colors group-hover:text-emerald-500">
                   MansaStock
@@ -280,6 +284,8 @@ export function MarketingHeader() {
     </>
   );
 }
+
+
 
 
 

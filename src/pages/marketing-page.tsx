@@ -1011,6 +1011,7 @@ export function MarketingPage() {
         {/* ══════════════════════════════════════════════════════
             WORKFLOW SECTION — CINEMATIC SHOWCASE
         ══════════════════════════════════════════════════════ */}
+        {false && (
         <section
           id="workflow"
           ref={workflowSectionRef}
@@ -1044,6 +1045,7 @@ export function MarketingPage() {
           </div>
 
           <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
+            {/*
             <div className="mx-auto max-w-4xl text-center mb-20 lg:mb-28">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -1070,6 +1072,7 @@ export function MarketingPage() {
                 </p>
               </motion.div>
             </div>
+            */}
 
             <motion.div
               initial={
@@ -1215,6 +1218,7 @@ export function MarketingPage() {
             </motion.div>
           </div>
         </section>
+        )}
 
         <section
           id="readiness"
@@ -1803,4 +1807,10 @@ export function MarketingPage() {
     </div>
   );
 }
+
+
+
+
+
+
 
