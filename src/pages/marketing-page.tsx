@@ -305,23 +305,8 @@ export function MarketingPage() {
                 whileTap={{ scale: 0.97 }}
                 className="rounded-xl"
               >
-                <Button
-                  size="lg"
-                  className="h-12 supa-button px-8 text-base font-semibold"
-                >
-                  Request a demo
-                </Button>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="h-12 border-white/10 bg-transparent px-8 text-base font-semibold text-white hover:bg-white/10 hover:border-white/20 transition-all"
-                >
-                  Request a demo
+                <Button asChild size="lg" className="h-12 supa-button px-8 text-base font-semibold">
+                  <a href="#book-demo">Request a demo</a>
                 </Button>
               </motion.div>
             </motion.div>
@@ -1756,46 +1741,55 @@ export function MarketingPage() {
               <span className="shimmer-text">store operations?</span>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-              Join the waitlist for our private beta and be the first to
-              experience the next generation of store management.
+              Tell us about your business and we will reach out with a live demo.
             </p>
 
-            {/* Email input row */}
+            {/* Netlify demo request form */}
             <form
               name="request-demo"
               method="POST"
               action="/?demo-request=success#book-demo"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              className="mx-auto mt-10 flex max-w-md flex-col gap-3 sm:flex-row"
+              className="mx-auto mt-10 flex max-w-2xl flex-col gap-3"
             >
               <input type="hidden" name="form-name" value="request-demo" />
               <input type="hidden" name="bot-field" />
-              <div className="relative flex-1">
-                <Mail className="absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-zinc-500" />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  aria-label="Email address for waitlist"
-                  required
-                  autoComplete="email"
-                  className="w-full rounded-xl border border-border bg-muted/40 py-3 pl-10 pr-4 text-sm text-foreground placeholder-muted-foreground outline-none ring-0 transition-all focus:border-primary/50 focus:bg-muted/80 focus:ring-2 focus:ring-primary/20 hover:border-white/20"
-                />
-              </div>
-              <motion.div
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.97 }}
-                className="glow-btn rounded-xl"
-              >
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full sm:w-auto h-12 supa-button px-7 text-base font-semibold rounded-xl"
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <div className="relative flex-1">
+                  <Mail className="absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-zinc-500" />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    aria-label="Email address for demo request"
+                    required
+                    autoComplete="email"
+                    className="w-full rounded-xl border border-border bg-muted/40 py-3 pl-10 pr-4 text-sm text-foreground placeholder-muted-foreground outline-none ring-0 transition-all focus:border-primary/50 focus:bg-muted/80 focus:ring-2 focus:ring-primary/20 hover:border-white/20"
+                  />
+                </div>
+                <motion.div
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="glow-btn rounded-xl"
                 >
-                  Join Waitlist
-                </Button>
-              </motion.div>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="h-12 w-full rounded-xl px-7 text-base font-semibold supa-button sm:w-auto"
+                  >
+                    Send request
+                  </Button>
+                </motion.div>
+              </div>
+              <textarea
+                name="message"
+                placeholder="Tell us what you want to see in the demo (team size, current tools, key pain points)."
+                aria-label="Demo request message"
+                required
+                rows={4}
+                className="w-full rounded-xl border border-border bg-muted/40 px-4 py-3 text-sm text-foreground placeholder-muted-foreground outline-none ring-0 transition-all focus:border-primary/50 focus:bg-muted/80 focus:ring-2 focus:ring-primary/20 hover:border-white/20"
+              />
             </form>
 
             <div className="mt-6 flex flex-wrap justify-center gap-4">

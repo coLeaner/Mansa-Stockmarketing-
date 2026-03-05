@@ -211,12 +211,8 @@ export function MarketingHeader() {
                 >
                   Sign in
                 </a>
-                <Button
-                  size="sm"
-                  variant="default"
-                  className="supa-button font-medium"
-                >
-                  Request a demo
+                <Button asChild size="sm" variant="default" className="supa-button font-medium">
+                  <a href="#book-demo">Request a demo</a>
                 </Button>
               </div>
 
@@ -269,11 +265,10 @@ export function MarketingHeader() {
                   >
                     Sign in
                   </a>
-                  <Button
-                    className="w-full supa-button"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Request a demo
+                  <Button asChild className="w-full supa-button">
+                    <a href="#book-demo" onClick={() => setMobileMenuOpen(false)}>
+                      Request a demo
+                    </a>
                   </Button>
                 </div>
               </div>
